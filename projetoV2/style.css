@@ -43,16 +43,19 @@ body {
                     shrink(diminuir em certos espaços)
                     basis(tamanho padrão do flex) */ 
     }
-    #menu p {
+    
+    #menu img {
+        padding: 0px 10px;
+    }
+
+    .pesq {
         background-color: #ffffff;
         max-width: 600px;
         padding: 10px;
         border-radius: 15px;
         text-align: center;
         flex: 1;
-    }
-    #menu img {
-        padding: 0px 10px;
+        border: 0px;
     }
 
 .barra {
