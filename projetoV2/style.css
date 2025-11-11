@@ -55,7 +55,7 @@ body {
         padding: 0px 10px;
     }
 
-nav {
+.barra {
     display: flex; /* cria um caixa flexível */
     flex-wrap: wrap;
     gap: 10px;
@@ -63,7 +63,7 @@ nav {
     text-align: left;
     background-color: var(--cor1);
 }
-    nav a{
+    .barra a{
         font-size: 1.5em;
         padding: 8px 16px;
         color: #ffffff;
@@ -71,12 +71,12 @@ nav {
         border-radius: 5px 5px 0px 0px;
         transition-duration: 0.1s;
     }
-    nav a:hover {
+    .barra a:hover {
         background-color: var(--cor4);
         color: var(--cor6);
         transition-duration: 0.1s;
     }
-    nav a:active {
+    .barra a:active {
         background-color: var(--cor5);
         color: var(--cor8);
     }
@@ -112,6 +112,7 @@ main {
     width: 100%; /* ocupa 100% do espaço setado */
     max-width: 350px;
     padding: 20px 10px;
+    flex: 1;
 }
     .links p {
     color: #000000;
@@ -163,6 +164,7 @@ main {
     width: 100%;
     padding: 20px 0px;
     position: relative;
+    flex: 1;
 }
     .forms > header > p {
         padding-left: 20px;
@@ -218,6 +220,7 @@ main {
     display: flex;
     justify-content: center;
     background-color: white;
+    padding: 5px;
     width: 10px;
     height: 10px;
     border: 5px solid var(--cor1);
@@ -237,14 +240,10 @@ main {
         color: #ffffff;
         text-align: center;
         padding: 10px;
-        width: 200px;
+        max-width: 180px;
         border-radius: 20px;
-        margin-top: 60px;
-        text-decoration: none;
-        position: absolute;
+        margin-left: 400px;
         flex: 1;
-        left: 370px;
-        top: 750px;
     }
         .forms .salvar:active {
             background-color: var(--cor5);
@@ -294,7 +293,7 @@ aside {
 
 footer {
     background-color: var(--cor5);
-    height: 210px;
+    max-height: 300px;
     color: #ffffff;
     display: flex; 
     flex-wrap: wrap; 
@@ -319,16 +318,17 @@ footer {
             footer > ul > li a:hover {
                 text-decoration: underline;
             }
-    footer > p {
+    .code {
         font-size: 1.5em;
         flex: 1;
-        margin-bottom: 140px;
-        margin-left: 60px;
+        margin-bottom: 80px;
+        margin-left: 85px;
     }
     .redes {
         flex: 1;
         font-size: 1.5em;
         margin-right: 10px;
+        margin-bottom: 80px;
         text-align: center;
         width: 150px;
     }
@@ -336,9 +336,8 @@ footer {
 .QR {
     background-color: white;
     padding: 2px;
-    position: absolute;
-    left: 670px;
-    top: 55px;
+    margin-top: 5px;
+    margin-left: 35px;
     flex: 1;
 }
 .heart {
@@ -416,10 +415,105 @@ footer {
     margin-left: 10px;
 }
 
-.pedidos {
-    list-style: inside;
+.filter {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    text-align: left;
+    margin-bottom: 60px;
 }
 
-.pedir h1 {
-    margin-top: 20px;
+    .filter > p {
+        border: 3px solid var(--cor1);
+        padding: 5px 70px;
+        text-align: center;
+        border-radius: 20px;
+        margin-left: 40px;
+    }
+
+.pedidos {
+    list-style: inside;
+    list-style-type: decimal-leading-zero;
+    text-indent: 60px;
+    border: 5px solid var(--cor1);
+    padding: 10px;
+    padding-left: 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 150px;
+    max-width: 565px;
+    position: relative;
 }
+    .pedidos > p {
+        position: absolute;
+        top: 0px;
+        left: 20px;
+        font-size: 1.2em;
+        padding-top: 0px;
+        margin-top: 7px;
+        margin-left: 30px;
+    }
+
+    .pedidos > img {
+        margin-top: 15px;
+        margin-bottom: 5px;
+        width: 50px;
+        height: 50px;
+        border: 3px solid var(--cor1);
+        border-radius: 60px;
+        margin-left: -20px;
+    }
+
+    .pedidos > .first {
+        margin-left: 0px;
+    }
+
+    .pedir h1 {
+        margin-top: 20px;
+        margin-bottom: 60px;
+        margin-left: 20px;
+    }
+
+hr {
+    margin-top: 5px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.detail {
+    color: var(--cor10);
+    margin-left: 90px;
+    font-size: 1.3em;
+    margin-right: 90px;
+    flex: 1;
+}
+
+.buy {
+    background-color: var(--cor1);
+    color: #ffffff;
+    max-width: 100px;
+    padding: 5px 25px;
+    border-radius: 25px;
+    margin-left: 90px;
+    flex: 1;
+}
+
+.pedidos > .total {
+    position: absolute;
+    top: 57px;
+    left: 320px;
+    font-size: 2.3em;
+}
+
+.pedidos > .valor {
+    position: absolute;
+    top: 68px;
+    left: 410px;
+    font-size: 1.2em;
+}
+
+
+
