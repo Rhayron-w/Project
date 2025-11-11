@@ -188,7 +188,11 @@ main {
         padding: 40px;
         columns: 2;
     }
+
     .forms > article > ul > li {
+        list-style-type: none;
+    }
+    .dado {
         background-color: #ffffff;
         color: var(--cor8);
         margin-bottom: 40px;
@@ -196,12 +200,14 @@ main {
         border-radius: 20px;
         max-width: 200px;
         list-style-type: none;
+        border: 0px;
     }
     .data {
         background-color: #ffffff;
         padding: 10px;
         border-radius: 20px;
         max-width: 200px;
+        border: 0px;
     }
     .masc {
         display: flex;
@@ -269,13 +275,15 @@ aside {
     }
     .white {
         background-color: #ffffff;
-        font-size: 1.2em;
+        font-size: 1em;
         color: var(--cor8);
         width: 300px;
         padding: 10px 10px;
         border-radius: 20px;
         flex: 1;
+        border: 0px;
     }
+    
     
     .link {
         background-color: var(--cor9);
@@ -427,12 +435,25 @@ footer {
     margin-bottom: 60px;
 }
 
-    .filter > p {
+    .filter > button {
         border: 3px solid var(--cor1);
         padding: 5px 70px;
         text-align: center;
         border-radius: 20px;
         margin-left: 40px;
+    }
+        .filter > button:active {
+            background-color: var(--cor7);
+            border: 3px solid var(--cor3);
+        }
+
+    .search {
+        border: 3px solid var(--cor1);
+        padding: 5px 70px;
+        text-align: center;
+        border-radius: 20px;
+        margin-left: 20px;
+        max-width: 200px;
     }
 
 .pedidos {
@@ -502,7 +523,16 @@ hr {
     border-radius: 25px;
     margin-left: 90px;
     flex: 1;
+    text-decoration: none;
 }
+    .buy:hover{
+        text-decoration: none;
+    }
+    .buy:active {
+        text-decoration: none;
+        color: var(--cor8);
+        background-color: var(--cor3);
+    }
 
 .pedidos > .total {
     position: absolute;
