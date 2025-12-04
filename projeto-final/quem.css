@@ -1,0 +1,594 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #0066cc;
+    --primary-dark: #0052a3;
+    --primary-light: #1a75d9;
+    --bg: #f0f4f8;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --text-light: #666666;
+    --muted: #999999;
+    --border: #e0e0e0;
+    --success: #00c853;
+    --yellow: #FFC107;
+    --cyan: #00BCD4;
+    --radius: 16px;
+    --radius-sm: 8px;
+    --max-width: 1200px;
+}
+
+body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: #fff;
+    padding: 12px 0;
+    box-shadow: 0 2px 8px rgba(0, 102, 204, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 8px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: "Fredoka", sans-serif; 
+    font-weight: 600;
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+.brand {
+    font-family: "Fredoka", sans-serif; 
+    font-weight: 600;
+}
+
+.search-wrap {
+    flex: 1;
+    max-width: 600px; 
+    margin-left: auto; 
+    margin-right: 20px; 
+}
+
+.search-wrap input {
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-wrap input::placeholder {
+    color: var(--muted);
+}
+
+.header-icons {
+    display: flex;
+    gap: 16px;
+}
+
+.header-icons a {
+    color: #fff;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.header-icons a:hover {
+    transform: scale(1.1);
+}
+
+/* Navegação Principal */
+.main-nav {
+    background: var(--primary-dark);
+    margin-top: 8px;
+    padding: 0;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 0;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+}
+
+.main-nav li {
+    flex: 1;
+    text-align: center;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 14px 8px;
+    display: block;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.main-nav .active a,
+.main-nav a:hover {
+    border-bottom-color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.hero-section {
+    padding: 40px 0;
+    background: #fff;
+}
+
+.hero-banner {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 102, 204, 0.2);
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius);
+}
+
+/* ========================================
+   ABOUT SECTION
+   ======================================== */
+
+.about-section {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.section-title.blue {
+    color: var(--primary);
+}
+
+.section-title.yellow {
+    color: var(--yellow);
+}
+
+.section-title.cyan {
+    color: var(--cyan);
+}
+
+.about-text {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 18px;
+    line-height: 1.7;
+}
+
+/* ========================================
+   COMPARE SECTION
+   ======================================== */
+
+.compare-section {
+    padding: 60px 0;
+    background-color: var(--bg);
+}
+
+.compare-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.compare-text {
+    flex: 1;
+}
+
+.compare-text p {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+.compare-text strong {
+    font-weight: 700;
+    color: var(--text);
+}
+
+.compare-icon {
+    flex: 0 0 200px;
+    text-align: center;
+}
+
+.compare-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ========================================
+   CASHBACK SECTION
+   ======================================== */
+
+.cashback-section {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.cashback-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.cashback-image {
+    flex: 0 0 300px;
+}
+
+.cashback-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+}
+
+.cashback-text {
+    flex: 1;
+}
+
+.cashback-text p {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 18px;
+    line-height: 1.7;
+}
+
+.cashback-text strong {
+    font-weight: 700;
+    color: var(--text);
+}
+
+.link-arrow {
+    color: var(--yellow);
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 12px;
+    transition: transform 0.3s;
+    font-size: 1rem;
+}
+
+.link-arrow:hover {
+    transform: translateX(5px);
+}
+
+/* ========================================
+   BARCODE SECTION
+   ======================================== */
+
+.barcode-section {
+    padding: 60px 0;
+    background-color: var(--bg);
+    text-align: center;
+}
+
+.barcode-text {
+    font-size: 1rem;
+    color: var(--text-light);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+    margin-top: 40px;
+    background: linear-gradient(135deg, #003d82 0%, #0052a3 100%);
+    color: #fff;
+    padding: 24px 0 16px;
+}
+
+/* Newsletter */
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 0 16px 30px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.newsletter-text strong {
+    font-size: 1rem;
+    display: block;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.newsletter-form input {
+    padding: 12px 18px;
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.newsletter-form button {
+    padding: 12px 24px;
+    border-radius: 24px;
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--primary);
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+    text-transform: lowercase;
+}
+
+.newsletter-form button:hover {
+    background: #fff;
+}
+
+/* Colunas do Footer */
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 30px 16px;
+}
+
+.footer-columns div {
+    min-width: 0;
+}
+
+.footer-columns h4 {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.footer-columns ul {
+    list-style: none;
+}
+
+.footer-columns li {
+    margin: 10px 0;
+}
+
+.footer-columns a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.footer-columns a:hover {
+    color: #fff;
+}
+
+/* Download do App */
+.download-app {
+    grid-column: span 2;
+    text-align: center;
+}
+
+.qr-code-footer {
+    width: 110px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 12px auto 0;
+    border-radius: var(--radius-sm);
+}
+
+/* Redes Sociais */
+.social-icons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+    justify-content: center;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.3rem;
+    transition: transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Copyright */
+footer .copyright {
+    text-align: center;
+    padding: 20px 16px 10px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ========================================
+   RESPONSIVIDADE
+   ======================================== */
+
+@media (max-width: 768px) {
+    .header-top {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .search-wrap {
+        order: 3;
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .header-icons {
+        gap: 12px;
+    }
+
+    .hero-banner {
+        text-align: center;
+    }
+
+    .banner-image {
+        width: 100%;
+    }
+
+    .compare-content,
+    .cashback-content {
+        flex-direction: column;
+    }
+
+    .compare-icon,
+    .cashback-image {
+        flex: 1;
+        max-width: 100%;
+    }
+
+    .compare-image,
+    .cashback-img {
+        max-width: 250px;
+    }
+
+    .newsletter {
+        text-align: center;
+    }
+
+    .newsletter-form {
+        max-width: 100%;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .download-app {
+        grid-column: span 1;
+    }
+}
+
+@media (min-width: 769px) {
+    .hero-banner {
+        overflow: hidden;
+    }
+
+    .banner-image {
+        width: 100%;
+    }
+
+    /* Newsletter Desktop */
+    .newsletter {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        padding: 0 24px 35px;
+    }
+
+    .newsletter-form {
+        flex-direction: row;
+        max-width: none;
+        gap: 12px;
+    }
+
+    .newsletter-form input {
+        width: 220px;
+    }
+
+    /* Footer Desktop */
+    .footer-columns {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 35px;
+        padding: 35px 24px;
+    }
+
+    .download-app {
+        grid-column: span 1;
+        text-align: left;
+    }
+
+    .qr-code-footer {
+        margin: 12px 0 0 0;
+    }
+
+    .social-icons {
+        justify-content: flex-start;
+    }
+}
