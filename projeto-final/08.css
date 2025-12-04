@@ -9,36 +9,34 @@
 }
 
 body {
-    background-color: #fbf4f4; /* Cor de fundo da página (quase branco) */
+    background-color: #fbf4f4; /* Cor de fundo da página */
     color: #333;
 }
 
 /* =========================================
-   2. CABEÇALHO (TOPO AZUL)
+   2. CABEÇALHO
    ========================================= */
 .header-bg {
-    background-color: #0c7df0; /* Azul do topo */
+    background-color: #0c7df0;
     padding: 10px 0;
     color: white;
 }
 
 .topo-cima {
-    display: flex; /* Alinha Logo, Pesquisa e Ícones lado a lado */
+    display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px 20px;
 }
 
-/* Seu H1 (Logo) */
 h1 {
     font-size: 24px;
     margin-right: 20px;
-    white-space: nowrap; /* Impede a quebra de linha do logo */
+    white-space: nowrap;
 }
 
-/* Formulário de pesquisa no topo */
 .topo-cima form {
-    flex-grow: 1; /* Faz a barra ocupar o espaço principal */
+    flex-grow: 1;
     max-width: 600px;
 }
 
@@ -57,11 +55,11 @@ h1 {
     white-space: nowrap;
 }
 
-/* Seus H2 (Menu de categorias) */
+/* MENU */
 .menu-categorias {
     display: flex;
     justify-content: center;
-    gap: 40px; /* Espaço entre os itens do menu */
+    gap: 40px;
     margin-top: 10px;
     padding-bottom: 10px;
 }
@@ -70,13 +68,12 @@ h2 {
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    text-transform: uppercase; /* Deixa em MAIÚSCULAS */
+    text-transform: uppercase;
     letter-spacing: 0.5px;
-    white-space: nowrap;
 }
 
 /* =========================================
-   3. TÍTULOS E CORPO PRINCIPAL
+   3. TÍTULOS E CONTEÚDO
    ========================================= */
 .main-content {
     text-align: center;
@@ -84,28 +81,26 @@ h2 {
 }
 
 h3 {
-    text-align: center;
-    margin-top: 0;
     font-size: 26px;
     color: #222;
 }
 
 h4 {
-    text-align: center;
     margin-bottom: 30px;
-    font-weight: normal;
     color: #555;
 }
 
-/* Container para centralizar os campos */
+/* =========================================
+   4. FORMULÁRIO
+   ========================================= */
 .formulario {
-    width: 60%; /* Largura dos campos no centro */
+    width: 60%;
     max-width: 400px;
-    margin: 0 auto; 
+    margin: 0 auto;
     text-align: left;
 }
 
-/* Seus H5 (Labels dos inputs) */
+/* Labels */
 h5 {
     margin-left: 15px;
     margin-bottom: 5px;
@@ -114,8 +109,12 @@ h5 {
     font-weight: bold;
 }
 
-/* Estilo geral dos Inputs cinzas (Pill shape) */
-.formulario input[type="text"] {
+/* TODOS OS INPUTS REDONDINHOS (CPF, EMAIL, TEL, NOME, ETC) */
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="date"],
+.formulario input[type="tel"],
+.formulario select {
     width: 100%;
     padding: 12px 20px;
     border-radius: 25px;
@@ -124,27 +123,34 @@ h5 {
     margin-bottom: 15px;
     outline: none;
     font-size: 14px;
-    box-shadow: none;
 }
 
-/* --- DATA E GÊNERO LADO A LADO --- */
+/* SELECT (Gênero) com o mesmo estilo */
+.formulario select {
+    appearance: none;
+    cursor: pointer;
+}
+
+/* --- DATA + GÊNERO LADO A LADO --- */
 .linha-dupla {
     display: flex;
     justify-content: space-between;
     gap: 15px;
-    margin-bottom: 15px; /* Adiciona margem abaixo da linha dupla */
+    margin-bottom: 15px;
 }
 
 .campo-metade {
     width: 50%;
 }
 
-/* Remove a margem extra dentro do campo metade para não quebrar o layout */
-.campo-metade input[type="text"] {
-    margin-bottom: 0;
+.campo-metade input,
+.campo-metade select {
+    margin-bottom: 0 !important;
 }
 
-/* --- CHECKBOXES --- */
+/* =========================================
+   5. CHECKBOXES
+   ========================================= */
 .checkbox-item {
     display: flex;
     align-items: flex-start;
@@ -155,30 +161,19 @@ h5 {
     width: 18px;
     height: 18px;
     margin-right: 10px;
-    border: 2px solid #000;
-    accent-color: #000; /* Define a cor do checkmark como preto */
-    appearance: none; /* Remove o estilo padrão (para customizar a borda) */
-}
-
-/* Estiliza o quadrado do checkbox */
-.checkbox-item input[type="checkbox"] {
-    -webkit-appearance: none;
+    cursor: pointer;
     appearance: none;
     background-color: transparent;
     border: 2px solid #111;
-    cursor: pointer;
     flex-shrink: 0;
     margin-top: 2px;
 }
 
-/* Estiliza o quadrado quando marcado (fundo preto) */
 .checkbox-item input[type="checkbox"]:checked {
     background-color: #111;
     border-color: #111;
-    position: relative;
 }
 
-/* Estilo do texto do checkbox */
 .checkbox-item label {
     font-size: 12px;
     color: #444;
